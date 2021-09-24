@@ -7,8 +7,8 @@ import { useDispatch } from "react-redux";
 import decode from "jwt-decode";
 import { LOGOUT } from "../../constants/actionTypes.js";
 
-const Navbar = () => {
-  const classes = useStyles();
+const Navbar = (props) => {
+  const classes = useStyles(props);
   const dispatch = useDispatch();
   const history = useHistory();
   const location = useLocation();
