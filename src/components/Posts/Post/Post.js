@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import useStyles from "./styles.js";
+import { makeStyles } from "@material-ui/styles";
 
 import {
   Card,
@@ -17,10 +18,10 @@ import moment from "moment";
 import { useDispatch } from "react-redux";
 import { deletePost, likePost } from "../../../actions/posts.js";
 
-const Post = ({ post, setCurrentId }) => {
+const Post = ({ post, setCurrentId }, props) => {
   const dispatch = useDispatch();
 
-  const classes = useStyles();
+  const classes = useStyles(props);
 
   const user = JSON.parse(localStorage.getItem("profile"));
 
